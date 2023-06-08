@@ -64,7 +64,7 @@ infoText.style.borderRadius = '4px';
 infoText.style.display = 'inline-block';
 
 link.appendChild(infoText);
-link.innerHTML += ' Tool Description';
+link.innerHTML += ' LFBot v.1.0';
 link.style.color = '#fff';
 link.style.textDecoration = 'none';
 link.style.backgroundColor = '#007bff';
