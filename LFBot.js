@@ -1,12 +1,12 @@
 /**
 The reason for developing this script was to automate the process of expanding content boxes on the "The Linux Foundation" website.
-As part of a training program on 07.06.2023, it was necessary to expand each content box manually, which could be time-consuming and repetitive. To streamline this process, you created this code to automatically expand all the boxes on the page.
+As part of a training program on 07.06.2023, it was necessary to expand each content box manually, which could be time-consuming and repetitive. To streamline this process, i created this code to automatically expand all the boxes on the page.
 
-By developing this script, you aimed to enhance the efficiency and productivity of the training process. Instead of manually expanding each box, the script automates the task, saving time and effort. This allows you to focus more on the training content itself rather than repetitive actions.
+By developing this script, i´ll aimed to enhance the efficiency and productivity of the training process. Instead of manually expanding each box, the script automates the task, saving time and effort. This allows me to focus more on the training content itself rather than repetitive actions.
 
-Furthermore, you have expressed the intention to improve the script by adding additional features like auto screenshots. This indicates a desire to enhance the functionality and usefulness of the script, potentially allowing for the capture of screenshots automatically for record-keeping or documentation purposes.
+I also intend to improve the script by adding additional functionality such as automatic screenshots. This extra functionality could possibly be interesting for capturing autonomous screenshots to look at the whole thing local again afterwards. But probably I won't implement this because the "LF" doesn't like such activities.
 
-Overall, your motivation for developing this script was driven by the need to optimize the training process at "The Linux Foundation" by automating the task of expanding content boxes and a desire to further enhance its capabilities with additional features.
+Overall, my motivation for developing this script was driven by the need to optimize the "tep= training enhancement process" at "The Linux Foundation" by automating the task of expanding content boxes.
  - - - - - - - - - - - - - - - - - -
 |   Developer: Jan Gebser           |
 |   Email: github@brainhub24.com    |
@@ -36,7 +36,7 @@ messageContent.innerHTML = html;
 messageContainer.appendChild(messageContent);
 document.body.appendChild(messageContainer);
 
-// Automatically remove the message after 3 seconds
+// Automatically remove the message after 10 seconds
 setTimeout(() => {
 document.body.removeChild(messageContainer)
 ;
@@ -54,6 +54,7 @@ linkContainer.style.zIndex = '9999';
 const link = document.createElement('a');
 link.href = 'https://github.com/Brainhub24/LFBot';
 link.target = '_blank';
+
 
 const infoText = document.createElement('span');
 infoText.innerText = 'Bot active!';
@@ -73,8 +74,11 @@ link.style.borderRadius = '4px';
 
 link.addEventListener('click', (event) => {
 event.preventDefault();
-displayMessage('https://github.com/Brainhub24/LFBot');
-});
+// displayMessage('{MSG}');
+    displayMessage('<div style="color: #000; font-size: 16px; line-height: 1.5; text-align: center;"><strong>LFBot - Tool Information</strong><br><br>' +
+      'LFBot is a JavaScript tool developed by Jan Gebser to automate the process of expanding content boxes on "The Linux Foundation" website. It enhances the efficiency and productivity of the training process by saving time and effort.<br><br>' +
+      'For more information and to access the code, visit the <a href="https://github.com/Brainhub24/LFBot" target="_blank">GitHub repository</a>.</div>');
+  });
 
 linkContainer.appendChild(link);
 document.body.appendChild(linkContainer);
